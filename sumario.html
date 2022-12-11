@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sumário</title>
+    </head>
+    <body>
+        <h1>Fruit Salad</h1>
+        <ol></ol>
+        <h2 id="banana">Banana</h2>
+        <h2 id="apple">Apple</h2>
+        <h2 id="pineapple">Pineapple</h2>
+        <h2 id="mango">Mango</h2>
+        <h2 id="yogurt">Yogurt</h2>
+        <script>
+            const subtitulos = document.querySelectorAll('h2');
+            const topicos = new Array();
+            subtitulos.forEach(subtitulo => {
+                topicos.push(subtitulo.textContent);
+            });
+            lista = document.querySelector('ol');
+            topicos.forEach(topico => {
+                const item = document.createElement('li');
+                item.textContent = topico;
+                lista.append(item);
+            })
+        </script>
+    </body>
+</html>
