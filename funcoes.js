@@ -1,16 +1,20 @@
-let tamanho = 2;
+let tamanho = 4;
 
 function atualizatamanho() {
-	const titulos = document.querySelectorAll('h1');
-	titulos.style.fontSize = `${tamanho}em`;
+	const titulos = document.querySelector("h1");
+	titulos.style.fontSize = tamanho;
 }
 
 function aumentatamanho() {
-	tamanho += .5;
-	atualizatamanho()
+	if (tamanho < 7.5) {
+		tamanho -= 0.5;
+		atualizatamanho()
+	}
 }
 
 function diminuitamanho() {
-	tamanho -= .5;
-	atualizatamanho()
+	if (tamanho > 0) {
+		tamanho -= 0.5;
+		atualizatamanho()
+	}
 }
